@@ -25,7 +25,7 @@ export default function SectionResult({query}: Props) {
       {data && data.items.map((user:any, index:number) => {
 
         return <ul className='my-2'>
-            <li >{user.login}</li>
+            <li > <Link href={`/cari/${user.login}` } >{user.login}</Link></li>
             <li > <Link href={user.repos_url}>{user.repos_url}</Link> </li>
           </ul>
 
