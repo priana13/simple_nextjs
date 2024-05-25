@@ -23,6 +23,7 @@ export default function RootLayout({
             <li className="mx-2"> <Link href="/">Home</Link> </li>
             <li className="mx-2"><Link href="/dashboard">Dashboard</Link></li>
             <li className="mx-2"><Link href="/calculator">Calculator</Link></li>
+            <li className="mx-2"><Link href="/cari">Cari</Link></li>
       </ul>
 
         {children}

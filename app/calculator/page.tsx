@@ -18,11 +18,11 @@ export default function Calculator() {
         <h2>Calculator</h2>
         <form action="">
 
-          <input type="numeric" className="mr-2 shadow rounded-sm mb-2" type="text" placeholder='angka 1'
+          <input type="number" className="mr-2 shadow rounded-sm mb-2" placeholder='angka 1'
             onChange={(e) => setAngka1(Number(e.target.value))}
 
           />
-          <input type="number" className="mr-2 shadow rounded-sm" type="text" placeholder='angka 2'
+          <input type="number" className="mr-2 shadow rounded-sm" placeholder='angka 2'
             onChange={(e) => setAngka2(Number(e.target.value))}
           />
 
