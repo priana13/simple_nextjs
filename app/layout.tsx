@@ -18,15 +18,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        
-      <ul className="flex">
-            <li className="mx-2"> <Link href="/">Home</Link> </li>
-            <li className="mx-2"><Link href="/dashboard">Dashboard</Link></li>
-            <li className="mx-2"><Link href="/calculator">Calculator</Link></li>
-            <li className="mx-2"><Link href="/cari">Cari</Link></li>
-      </ul>
 
-        {children}
+        <div className="p-8">
+   
+          <ul className="flex bg-blue-300">
+              <li className="mx-2 hover:bg-blue-600 hover:text-white py-3 px-1"> <Link href="/">Home</Link> </li>
+              <li className="mx-2 hover:bg-blue-600 hover:text-white py-3 px-1"><Link href="/dashboard">Dashboard</Link></li>
+              <li className="mx-2 hover:bg-blue-600 hover:text-white py-3 px-1"><Link href="/calculator">Calculator</Link></li>
+              <li className="mx-2 hover:bg-blue-600 hover:text-white py-3 px-1"><Link href="/cari">Cari</Link></li>
+          </ul>
+
+          {children}
+
+        </div>
+     
       </body>
     </html>
   )
