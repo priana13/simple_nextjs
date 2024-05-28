@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Suspense } from "react";
+import RepoList from "./sectionRepository";
 
 async function getDataUser(param:string){
 
@@ -8,30 +9,6 @@ async function getDataUser(param:string){
 
   return (await res).json();
 }
-
-
-async function getDataRepos(param:string){
-
-  const res = fetch(`https://api.github.com/search/users/${param}/repos`)
-
-  await new Promise(r=> setTimeout(r, 2000))
-
-  return (await res).json();
-}
-
-const RepoList = async({slug}:any ) => {
-
-  const dataRepos = await getDataRepos(slug);
-
-  return <>
-    <p>Repo List</p>
-
-    <div>
-      {JSON.stringify(dataRepos)}
-    </div>
-  </>
-}
-
 
 
 export default async function DetailCari({params}: {params: {slug:string}}) {
@@ -52,8 +29,7 @@ export default async function DetailCari({params}: {params: {slug:string}}) {
       <Suspense fallback={<div>Sedang menambil repository</div>} >  
         {/* @ts-ignore */}
         <RepoList slug={params.slug} />
-
-      </Suspense>
+      </Suspense>    
         
     </div>
   )
